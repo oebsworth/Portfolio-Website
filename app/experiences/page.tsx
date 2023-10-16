@@ -13,7 +13,7 @@ const ExperiencesPage = () => {
         }
     ]
 
-    const workExperienceData = []
+    const workExperienceData: object[] = []
 
     return (
         <div className='flex flex-col justify-start items-center w-full'>

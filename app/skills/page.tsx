@@ -113,7 +113,7 @@ const SkillsPage = () => {
         },
     ]
 
-    const getSkillLevelStyle = (level) => {
+    const getSkillLevelStyle = (level: number) => {
         const width = `${level * 10}%`;
         return { width };
     }
