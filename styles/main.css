@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-background {
+    @apply bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-700 via-violet-900 to-slate-900
+}
