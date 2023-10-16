@@ -9,11 +9,18 @@ const ExperiencesPage = () => {
         {
             title: "Farnborough College of Technology",
             date: "2020-2022",
-            description: "I completed a Game Studies course at FCOT. I acheived a MMP.",
+            description: "While working at Farnborough, I gained basic skills in 3D modeling and programming. After leaving in May 2022, I focused on improving and expanding my abilities in these areas, working hard to enhance my proficiency. I achieved a MMP.",
         }
     ]
 
-    const workExperienceData: object[] = []
+    const workExperienceData = [
+        {
+            title: "Pool Helper",
+            company: "Farnborough Fins",
+            date: "2019-2020",
+            description: ""
+        }
+    ]
 
     return (
         <div className='flex flex-col justify-start items-center w-full'>
@@ -22,7 +29,7 @@ const ExperiencesPage = () => {
 
             <div className='py-4'>
                 {["education", "work experience"].map((category, index) => (
-                    <button key={`category_${index}`} onClick={() => setSelectedTitle(category)} className='border-2 mx-2 py-2 px-4 sm:mx-4 sm:px-8 uppercase'>{category}</button>
+                    <button key={`category_${index}`} onClick={() => setSelectedTitle(category)} className={`border-2 mx-2 py-2 px-4 sm:mx-4 sm:px-8 uppercase ${selectedTitle == category ? "inner-shadow" : ""}`}>{category}</button>
                 ))}
             </div>
 
@@ -31,8 +38,8 @@ const ExperiencesPage = () => {
                     {educationData.map((education, index) => (
                         <div key={`education_${index}`} className='flex flex-col justify-start items-center text-lg py-2'>
                             <h2 className='text-xl'>{education.title}</h2>
-                            <h2 className='text-xl'>{education.date}</h2>   
-                            <p className="pt-2">{education.description}</p>
+                            <h2 className='text-xl'>{education.date}</h2>
+                            <p className="w-[45%] pt-2">{education.description}</p>
                         </div>
                     ))}
                 </div>
@@ -41,8 +48,13 @@ const ExperiencesPage = () => {
                     {workExperienceData.length == 0 ? (
                         <p className='text-lg'>Currently no work experience.</p>
                     ) : workExperienceData.map((workExperience, index) => (
-                        <div>
-
+                        <div key={`work-experience_${index}`} className='flex flex-col justify-start items-center text-lg py-2'>
+                            <h2 className='text-xl'>{workExperience.title}, {workExperience.company}</h2>
+                            <h2 className='text-xl'>{workExperience.date}</h2>
+                            <p  className="w-[45%] pt-2">As a dedicated pool helper at Farnborough Fins, I ensured a safe and enjoyable
+                                environment for young children during aquatic activities. Collaborating with the team, I
+                                prioritized safety and positive engagement for families. Unfortunately this position ended
+                                due to COVID-19.</p>
                         </div>
                     ))}
                 </div>
