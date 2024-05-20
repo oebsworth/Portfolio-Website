@@ -18,7 +18,7 @@ const ExperiencesPage = () => {
             title: "Pool Helper",
             company: "Farnborough Fins",
             date: "2019-2020",
-            description: ""
+            description: "2019: I worked as a dedicated pool helper for Farnborough Fins, I ensured a safe environment for young children during their activities. I collaborated with a new team each shift, building new relationships in real-time to provide the best experience for teachers and the children that were taking part. Unfortunately this position ended due to covid."
         }
     ]
 
@@ -51,7 +51,7 @@ const ExperiencesPage = () => {
                         <div key={`work-experience_${index}`} className='flex flex-col justify-start items-center text-lg py-2'>
                             <h2 className='text-xl'>{workExperience.title}, {workExperience.company}</h2>
                             <h2 className='text-xl'>{workExperience.date}</h2>
-                            <p  className="w-[45%] pt-2">As a dedicated pool helper at Farnborough Fins, I ensured a safe and enjoyable
+                            <p className="w-[45%] pt-2">As a dedicated pool helper at Farnborough Fins, I ensured a safe and enjoyable
                                 environment for young children during aquatic activities. Collaborating with the team, I
                                 prioritized safety and positive engagement for families. Unfortunately this position ended
                                 due to COVID-19.</p>
