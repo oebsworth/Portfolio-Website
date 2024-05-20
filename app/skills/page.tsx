@@ -1,117 +1,55 @@
 import React from 'react';
 
 const SkillsPage = () => {
-    const programmingLanguagesData = [
+
+    const skillsData = [
         {
-            name: "C#",
-            level: 7,
+            name: "Programming Languages",
+            data: [
+                { name: "C#", level: 7, },
+                { name: "HTML", level: 8, },
+                { name: "CSS", level: 7, },
+                { name: "JavaScript", level: 9, },
+                { name: "TypeScript", level: 5, },
+                { name: "Python", level: 7, },
+                { name: "C++", level: 5, },
+            ],
         },
         {
-            name: "HTML",
-            level: 8,
+            name: "Tools",
+            data: [
+                { name: "Visual Studio", level: 5, },
+                { name: "VS Code", level: 7, },
+                { name: "Git", level: 6, },
+                { name: "Photoshop", level: 7, },
+                { name: "Blender", level: 9, },
+                { name: "Figma", level: 7, },
+            ],
         },
         {
-            name: "CSS",
-            level: 7,
+            name: "Frameworks and Engines",
+            data: [
+                { name: "Unity", level: 7, },
+                { name: "Unreal-Engine 5", level: 5, },
+                { name: "React.js", level: 7, },
+                { name: "Next.js", level: 8, },
+                { name: "Nuxt.js", level: 5, },
+            ],
         },
         {
-            name: "JavaScript",
-            level: 9,
-        },
-        {
-            name: "TypeScript",
-            level: 5,
-        },
-        {
-            name: "Python",
-            level: 7,
-        },
-        {
-            name: "C++",
-            level: 5,
-        },
+            name: "Technolgies",
+            data: [
+                { name: "Tailwind CSS", level: 7, },
+                { name: "GSAP", level: 5, },
+                { name: "three.js", level: 6, },
+                { name: "MongoDB Atlas", level: 6, },
+                { name: "Mongoose", level: 7, },
+                { name: "Cloudinary", level: 5, },
+                { name: "Sanity", level: 6, },
+            ],
+        }
     ]
 
-    const toolsData = [
-        {
-            name: "Visual Studio",
-            level: 5,
-        },
-        {
-            name: "VS Code",
-            level: 7,
-        },
-        {
-            name: "Git",
-            level: 6,
-        },
-        {
-            name: "Photoshop",
-            level: 7,
-        },
-        {
-            name: "Blender",
-            level: 9,
-        },
-        {
-            name: "Figma",
-            level: 7,
-        },
-    ]
-
-    const frameworksAndEnginesData = [
-        {
-            name: "Unity",
-            level: 7,
-        },
-        {
-            name: "Unreal-Engine 5",
-            level: 5,
-        },
-        {
-            name: "React.js",
-            level: 7,
-        },
-        {
-            name: "Next.js",
-            level: 8,
-        },
-        {
-            name: "Nuxt.js",
-            level: 5,
-        },
-    ]
-
-    const technologiesData = [
-        {
-            name: "Tailwind CSS",
-            level: 7,
-        },
-        {
-            name: "GSAP",
-            level: 5,
-        },
-        {
-            name: "three.js",
-            level: 6,
-        },
-        {
-            name: "MongoDB Atlas",
-            level: 6,
-        },
-        {
-            name: "Mongoose",
-            level: 7,
-        },
-        {
-            name: "Cloudinary",
-            level: 5,
-        },
-        {
-            name: "Sanity",
-            level: 6,
-        },
-    ]
 
     const getSkillLevelStyle = (level: number) => {
         const width = `${level * 10}%`;
@@ -119,62 +57,30 @@ const SkillsPage = () => {
     }
 
     return (
-        <div className='flex flex-col justify-start items-center w-full'>
-            <p className='py-4 text-lg'>Below you will find my self-evaluated skill levels out of ten.</p>
-            <div className='w-1/2 border-b-2'></div>
-
-            <div className="w-1/2 flex flex-col justify-start items-start px-4 pt-2">
-                <h2 className='py-2'>Programming Languages:</h2>
-                {programmingLanguagesData.map((programmingLanguage, index) => {
-                    const skillLevelStyle = getSkillLevelStyle(programmingLanguage.level);
-                    return (
-                        <button key={`programming-language_${index}`} style={skillLevelStyle} className="flex justify-between max-w-full border-2 pl-2 mb-2 text-start">
-                            {programmingLanguage.name}
-                            <p className='pr-2'>{programmingLanguage.level}</p>
-                        </button>
-                    );
-                })}
-            </div>
-
-            <div className="w-1/2 flex flex-col justify-start items-start px-4">
-                <h2 className='py-2'>Tools:</h2>
-                {toolsData.map((tool, index) => {
-                    const skillLevelStyle = getSkillLevelStyle(tool.level);
-                    return (
-                        <button key={`programming-language_${index}`} style={skillLevelStyle} className="flex justify-between max-w-full border-2 pl-2 mb-2 text-start">
-                            {tool.name}
-                            <p className='pr-2'>{tool.level}</p>
-                        </button>
-                    );
-                })}
-            </div>
-
-            <div className="w-1/2 flex flex-col justify-start items-start px-4">
-                <h2 className='py-2'>Frameworks and Engines:</h2>
-                {frameworksAndEnginesData.map((frameworkAndEngine, index) => {
-                    const skillLevelStyle = getSkillLevelStyle(frameworkAndEngine.level);
-                    return (
-                        <button key={`programming-language_${index}`} style={skillLevelStyle} className="flex justify-between max-w-full border-2 pl-2 mb-2 text-start">
-                            {frameworkAndEngine.name}
-                            <p className='pr-2'>{frameworkAndEngine.level}</p>
-                        </button>
-                    );
-                })}
-            </div>
-
+        <div className="flex flex-col justify-start items-center w-full">
+            <p className="py-4 text-lg">Below you will find my self-evaluated skill levels out of ten.</p>
+            <div className="w-1/2 border-b-2"></div>
             <div className="w-1/2 flex flex-col justify-start items-start px-4 pb-4">
-                <h2 className='py-2'>Technologies:</h2>
-                {technologiesData.map((technology, index) => {
-                    const skillLevelStyle = getSkillLevelStyle(technology.level);
-                    return (
-                        <button key={`programming-language_${index}`} style={skillLevelStyle} className="flex justify-between max-w-full border-2 pl-2 mb-2 text-start">
-                            {technology.name}
-                            <p className='pr-2'>{technology.level}</p>
-                        </button>
-                    );
-                })}
+                {skillsData.map((section, sectionIndex) => (
+                    <div key={`section_${sectionIndex}`} className="w-full">
+                        <h2 className="py-2">{section.name}</h2>
+                        {section.data.map((skill, skillIndex) => {
+                            const skillLevelStyle = getSkillLevelStyle(skill.level);
+                            return (
+                                <div
+                                    key={`skill_${skillIndex}`}
+                                    className="skill-bar-container mb-2"
+                                >
+                                    <div className="skill-bar" style={skillLevelStyle}>
+                                        <span className="skill-name pl-2">{skill.name}</span>
+                                        <span className="skill-level pr-2">{skill.level}</span>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+                ))}
             </div>
-
         </div>
     );
 };

@@ -9,3 +9,23 @@
 .inner-shadow {
     box-shadow: inset 0px 0px 5px 1px rgba(255,255,255,1);
 }
+
+.skill-bar-container {
+    display: flex;
+    width: 100%;
+    border: 2px solid;
+}
+
+.skill-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: #f0f0f025;
+    height: 2rem;
+}
+
+.skill-name, .skill-level {
+    display: inline-block;
+}
