@@ -12,7 +12,7 @@ const PageSelection = () => {
             {["projects", "experiences", "skills", "c.v."].map((title, index) => (
                 <Link
                     key={`button_${index}`}
-                    href={title === "projects" ? "/" : title === "c.v." ? "/documents/c.v.pdf" : `/${title}`}
+                    href={title === "projects" ? "/" : title === "c.v." ? "https://oebsworth.github.io/procedural-cv-nextjs-web/" : `/${title}`}
                     target={title === "c.v." ? "_blank" : ""}
                     rel={title === "c.v." ? "noreferrer noopener" : ""}
                     className={`border-2 mx-2 py-2 px-4 sm:mx-4 sm:px-8 uppercase ${(
