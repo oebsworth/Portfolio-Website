@@ -11,6 +11,7 @@ const SkillsPage = () => {
                 { name: "Python", level: 7, },
                 { name: "C++", level: 6, },
                 { name: "TypeScript", level: 5 },
+                { name: "Kotlin", level: 5 }
             ]
         },
         {
@@ -72,6 +73,9 @@ const SkillsPage = () => {
                 { name: "MS Word", level: "7" },
                 { name: "MS Powerpoint", level: "5" },
                 { name: "MS Excel", level: "3" },
+
+                // Android
+                {name: "Android Studio", level: 5}
             ],
         },
         {
